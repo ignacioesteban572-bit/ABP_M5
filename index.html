@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <h1>Gestor de Tareas <span>Pro</span></h1>
+            <p class="subtitle">Gestiona tus ideas, potencia tu productividad.</p>
+        </header>
+
+        <section class="input-section">
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="¿Qué tienes pendiente hoy?" autocomplete="off" required>
+                <button type="submit" id="add-btn">
+                    <span class="plus-icon">+</span>
+                </button>
+            </form>
+        </section>
+
+        <section class="stats-section">
+            <div class="stat-card">
+                <span id="total-count">0</span>
+                <label>Tareas</label>
+            </div>
+            <div class="stat-card">
+                <span id="completed-count">0</span>
+                <label>Completadas</label>
+            </div>
+        </section>
+
+        <section class="tasks-section">
+            <ul id="task-list">
+                <!-- Tareas se insertarán aquí dinámicamente -->
+            </ul>
+        </section>
+    </main>
+
+    <script defer src="app.js"></script>
+</body>
+</html>
